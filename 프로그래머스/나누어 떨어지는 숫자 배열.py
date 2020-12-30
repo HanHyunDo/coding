@@ -1,12 +1,10 @@
-def solution(a, b):
-    answer = 0
-    if a > b:
-        for i in range(b, a+1):
-            answer += i
-        return answer
-    elif b > a:
-        for y in range(a, b+1):
-            answer += y
-        return answer
+def solution(arr, divisor):
+    b = [-1]
+    for i in range(len(arr)):
+        if arr[i] % divisor == 0:
+            b.append(arr[i])
+    if len(b) == 1:
+        return b
     else:
-        return a
+        b.pop(0)
+        return sorted(b)

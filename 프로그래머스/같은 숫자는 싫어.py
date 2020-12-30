@@ -7,4 +7,3 @@ def solution(arr):
         elif arr[i] != arr[i-1]:
             b.append(arr[i])
     return b
-print(solution(arr))
