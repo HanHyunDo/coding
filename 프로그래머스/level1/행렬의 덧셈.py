@@ -1,12 +1,12 @@
 def solution(arr1, arr2):
-    cnt = 0
-    for i in arr1:  # i = arr[]
-        for y in len(i):
-            arr2[cnt][y] = arr1[cnt][y] + arr2[cnt][y]
-        cnt += 1
-    return arr2
+    my_list = []
+    for a, b in zip(arr1, arr2):
+        my_list_1 = []
+        for i in range(len(a)):
+            my_list_1.append(a[i] + b[i])
+            if i == len(a)-1:
+                my_list.append(my_list_1)
+    return my_list
+
 
 print(solution([[1,2],[2,3]], [[3,4],[5,6]]))
-
-# a = [[1,2],[2,3]]
-# print(a[0][0])
