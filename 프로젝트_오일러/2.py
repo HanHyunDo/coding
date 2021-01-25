@@ -5,17 +5,6 @@ def fibo(x):
     while answers[-2] + answers[-1] < x:
         c = answers[-2] + answers[-1]
         answers.append(c)
-    d = 0
-    i = 0
-    while i <= len(answers):
-        if answers[-1] == answers[i]:
-            if answers[i] % 2 == 0:
-                d += answers[i]
-                break
-        if answers[i] % 2 == 0:
-            d += answers[i]
-            i += 1
-        else:
-            i += 1
-    return d
+
+    return sum(list(filter(lambda x : x % 2 == 0, answers)))
 print(fibo(4000000))
